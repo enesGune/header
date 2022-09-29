@@ -1,0 +1,43 @@
+@mixin font-face($style-name, $family, $category: "") {
+    $filepath: "../fonts/" + $family;
+    @font-face {
+        font-family: "#{$style-name}";
+        src: url($filepath + ".eot");
+        src: url($filepath + ".eot?#iefix") format("embedded-opentype"), url($filepath + ".woff") format("woff"), // url($filepath + ".ttf")  format('truetype'),
+        url($filepath + ".svg#" + $style-name + "") format("svg");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+}
+
+//@include font-face('SharpGroteskBold25-Regular', 'SharpGroteskBold25-Regular', 'serif');
+@mixin font-black {
+    font-family: "Montserrat-Black", arial, helvetica, sans-serif;
+    font-weight: normal;
+}
+
+@mixin font-semibold {
+    font-family: "Montserrat-SemiBold", arial, helvetica, sans-serif;
+    font-weight: normal;
+}
+
+@mixin font-medium {
+    font-family: "Montserrat-Medium", arial, helvetica, sans-serif;
+    font-weight: normal;
+}
+
+@mixin font-regular {
+    font-family: "Montserrat-Regular", arial, helvetica, sans-serif;
+    font-weight: normal;
+}
+
+@mixin font-extraBold {
+    font-family: "Montserrat-ExtraBold", arial, helvetica, sans-serif;
+    font-weight: normal;
+}
+
+@mixin font-bold {
+    font-family: "Montserrat-Bold", arial, helvetica, sans-serif;
+    font-weight: normal;
+}
